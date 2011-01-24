@@ -1,19 +1,10 @@
 "---------------------------------------------------------------------------
 "    Description:  Programming automation
-"    Author:       ywgx , vimperator@163.com
+"    Author:       kk , ywgx , vimperator@163.com
 "    Division:     Software College Northeastern University
-"    Version:      1.5
+"    Version:      1.6
 "---------------------------------------------------------------------------
-syntax on
-syntax enable
-set enc=utf-8
-filetype plugin indent on
-set autoindent smartindent nocp
-set exrc ts=2 sw=2 backspace=2 softtabstop=2
-set cin magic showmode hlsearch incsearch wildmenu
-set fileencodings=utf-8,gbk,ucs-bom,cp936,gb2312,gb18030
-im  ,, <ESC>
-im  ;; <ESC>
+
 map <Up>   gk
 map <Down> gj
 no! <M-k> <Up>
@@ -36,8 +27,6 @@ func Py()
 	en
 endf
 func Cc()
-	ino , ,<space>
-	ino ; ;<space>
 	ino <= <space><=<space>
 	ino *= <space>*=<space>
 	ino /= <space>/=<space>

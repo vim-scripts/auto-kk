@@ -1,5 +1,20 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3405
 
+1.Normal mode
+    ;;      Exit without saving
+    ,,      Save and exit
+    mm   to compile and debug
+2.Insert mode
+    mm      return Normal mode
+    <Alt-j>  Down
+    <Alt-k> Up
+    <Alt-h> Left
+    <Alt-l>  Right
+3.When writing c, cpp ,... code, the code is automatically formatted
+    For example:   If you input a==3;
+    auto.vim                             a  ==  3;
+4.Both ruby , c, cpp, python,shell,perl code, F2 key or "mm" to compile and debug
+
 modify from this: 
 http://www.vim.org/scripts/script.php?script_id=3341
 
