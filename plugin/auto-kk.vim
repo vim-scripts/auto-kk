@@ -5,6 +5,10 @@
 "    Version:      1.6
 "---------------------------------------------------------------------------
 
+map <c-f> :/<c-v><cr>n
+imap <c-z> <esc>ua
+nmap <c-z> <esc>u
+
 map <Up>   gk
 map <Down> gj
 no! <M-k> <Up>
@@ -12,13 +16,11 @@ no! <M-j> <Down>
 no! <M-h> <left>
 no! <M-l> <Right>
 nm <silent> tt :!ctags -R .<CR>
-nm <silent> ;; :q<CR>
-nm <silent> ,, :wqa<CR>
 au FileType python,ruby :call Py()
 au FileType cpp,c,cc,h :call Cc()
 func Py()
-	nm mm :call CR1()<CR>
-	im mm <ESC>
+	nm <c-e> :call CR1()<CR>
+	im <c-e> <ESC>:call CR1()<CR>
 	im <F2> <ESC>
 	if exists("$DISPLAY")
 		nm <F2> :call CR()<CR>
@@ -38,16 +40,16 @@ func Cc()
 	ino && <space>&&<space>
 	ino != <space>!=<space>
 	nm<Space> i <Esc>l
-	im<silent> mm <ESC>A;<ESC>
+	im<silent> <c-e> <ESC>A;<ESC>
 	im<silent> nn <ESC>A;<ESC>o
 	if exists("$DISPLAY")
 		nm<F2> :call CR()<CR><CR>
 		im<F2> <ESC> :call CR()<CR><CR>
-		nm mm :call CR1()<CR><CR>
+		nm <c-e> :call CR()<CR><CR>
 	else
 		nm<F2> :call CR1()<CR>
 		im<F2> <ESC> :call CR1()<CR>
-		nm mm :call CR1()<CR>
+		nm <c-e> :call CR1()<CR>
 	en
 	nm<silent> ca I/*<ESC><left>A<ESC><left>
 	nm<silent> cd :s/\/\*//g<cr><ESC>:s/\*\///g<cr><ESC>

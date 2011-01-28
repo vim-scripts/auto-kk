@@ -1,11 +1,12 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=3405
 
 1.Normal mode
-    ;;      Exit without saving
-    ,,      Save and exit
-    mm   to compile and debug
+    <c-e>   to compile and debug
+    <c-f> search clipboard
+    <c-z> undo
 2.Insert mode
-    mm      return Normal mode
+    <c-z> undo
+    <c-e>   to compile and debug
     <Alt-j>  Down
     <Alt-k> Up
     <Alt-h> Left
